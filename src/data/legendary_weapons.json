@@ -1,0 +1,109 @@
+{
+    "weapons": {
+        "void_sword": {
+            "type": "sword",
+            "name": "Void Sword",
+            "description": "Wield the Void Sword to summon a mystical void shield, absorbing incoming attacks and unleashing a devastating explosion when the shield is depleted.",
+            "element": "void",
+            "tag": "legendary",
+            "special_perk": {
+                "name": "Void Shield",
+                "description": "Summons a void shield that absorbs damage and releases a void explosion when depleted."
+            },
+            "stats_boost": {
+                "block_effectiveness": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "damage": {
+                    "value": 5,
+                    "type": "percent"
+                }
+            }
+        },
+        "abyssal_dagger": {
+            "type": "dagger",
+            "name": "Abyssal Dagger",
+            "description": "The Abyssal Dagger overflows with void energy, causing enemies to explode in a violent eruption upon their demise.",
+            "element": "void",
+            "tag": "legendary",
+            "special_perk": {
+                "name": "Void Overload",
+                "description": "Overloads enemies with void energy, causing them to explode on death."
+            },
+            "stats_boost": {
+                "critical_hit_damage": {
+                    "value": 15,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 5,
+                    "type": "percent"
+                }
+            }
+        },
+        "voidblade": {
+            "type": "sword",
+            "name": "Voidblade",
+            "description": "Harness the power of the Voidblade to create rifts that draw in and annihilate enemies with dark energy.",
+            "element": "void",
+            "tag": "legendary",
+            "special_perk": {
+                "name": "Void Rift",
+                "description": "Creates void rifts that pull in and damage enemies."
+            },
+            "stats_boost": {
+                "block_effectiveness": {
+                    "value": 8,
+                    "type": "percent"
+                },
+                "damage": {
+                    "value": 7,
+                    "type": "percent"
+                }
+            }
+        },
+        "void_lance": {
+            "type": "rifle",
+            "name": "Void Lance",
+            "description": "The Void Lance fires a concentrated beam of void energy, piercing through foes and sapping their defenses over time.",
+            "element": "void",
+            "tag": "legendary",
+            "special_perk": {
+                "name": "Void Beam",
+                "description": "Fires a concentrated void beam that pierces through enemies, dealing damage over time and reducing their defenses."
+            },
+            "stats_boost": {
+                "damage_over_time": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "defense_reduction": {
+                    "value": 5,
+                    "type": "percent"
+                }
+            }
+        },
+        "ethereal_gauntlet": {
+            "type": "gauntlet",
+            "name": "Ethereal Gauntlet",
+            "description": "The Ethereal Gauntlet conjures a void aura, mitigating damage taken and reflecting a portion back to assailants.",
+            "element": "void",
+            "tag": "legendary",
+            "special_perk": {
+                "name": "Void Aura",
+                "description": "Generates a protective void aura that reduces incoming damage and reflects a portion back to attackers."
+            },
+            "stats_boost": {
+                "damage_reflection": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "incoming_damage_reduction": {
+                    "value": 8,
+                    "type": "percent"
+                }
+            }
+        }
+    }
+}

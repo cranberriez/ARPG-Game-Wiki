@@ -1,0 +1,49 @@
+#root {
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.void {
+    color: #8a2be2;
+}
+
+.plasma {
+    color: #00bfff;
+}
+
+.crystal {
+    color: #40e0d0;
+}
+
+.shadow {
+    color: #ff6347;
+}
+
+.main-column-cont {
+    display: flex;
+}
+
+.nav-column {
+    width: 30%;
+}
+
+.main-column {
+    width: 70%;
+}
+
+.hidden {
+    display: none;
+}

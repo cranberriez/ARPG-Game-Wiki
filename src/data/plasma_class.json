@@ -1,0 +1,363 @@
+{
+    "plasma": {
+        "keywords": {
+            "ionize": {
+                "name": "Ionize",
+                "description": "Charges enemies with plasma, dealing damage over time and making them more vulnerable to subsequent plasma attacks.",
+                "stats": {
+                    "damage": {
+                        "value": 20,
+                        "type": "damage"
+                    },
+                    "vulnerability_increase": {
+                        "value": 15,
+                        "type": "percent"
+                    },
+                    "duration": {
+                        "value": 10,
+                        "type": "seconds"
+                    }
+                }
+            },
+            "overload": {
+                "name": "Overload",
+                "description": "Causes plasma-charged enemies to explode upon death or after a set duration, dealing area damage to nearby enemies.",
+                "stats": {
+                    "explosion_damage": {
+                        "value": 50,
+                        "type": "damage"
+                    },
+                    "explosion_radius": {
+                        "value": 5,
+                        "type": "range"
+                    }
+                }
+            },
+            "supernova": {
+                "name": "Supernova",
+                "description": "Creates a massive plasma explosion that deals heavy area damage, often with a lingering effect that continues to damage enemies caught in the blast.",
+                "stats": {
+                    "damage": {
+                        "value": 100,
+                        "type": "damage"
+                    },
+                    "lingering_damage": {
+                        "value": 20,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 5,
+                        "type": "seconds"
+                    }
+                }
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Plasma Bolt",
+                    "description": "Fires a bolt of plasma energy, dealing continuous damage over time, causing Ionize.",
+                    "keywords": ["ionize"],
+                    "stats": {
+                        "damage": {
+                            "value": 50,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 8,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 5,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Plasma Burst",
+                    "description": "Releases a burst of plasma that damages enemies in a radius, causing Overload.",
+                    "keywords": ["overload"],
+                    "stats": {
+                        "damage": {
+                            "value": 70,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 5,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "keywords": ["ionize"]
+                    }
+                },
+                {
+                    "name": "Plasma Grenade",
+                    "description": "Throws a grenade that releases a plasma explosion, causing area damage and Overload.",
+                    "keywords": ["overload"],
+                    "stats": {
+                        "damage": {
+                            "value": 80,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 6,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 12,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 25,
+                            "type": "percent"
+                        },
+                        "keywords": ["supernova"]
+                    }
+                },
+                {
+                    "name": "Plasma Wave",
+                    "description": "Sends a wave of plasma energy forward, damaging and knocking back enemies, causing Supernova.",
+                    "keywords": ["supernova"],
+                    "stats": {
+                        "damage": {
+                            "value": 90,
+                            "type": "damage"
+                        },
+                        "knockback": {
+                            "value": 3,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 15,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Plasma Shield",
+                    "description": "Reduces damage taken from attacks, causing Ionize.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Reactive Armor",
+                    "description": "Reflects a portion of plasma damage back to attackers, causing Overload.",
+                    "keywords": ["overload"],
+                    "effect": {
+                        "damage_return": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 12,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 25,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Plasma Barrier",
+                    "description": "Creates a barrier that absorbs damage and releases a plasma burst when broken, causing Supernova.",
+                    "keywords": ["supernova"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "stats": {
+                        "damage": {
+                            "value": 50,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 5,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Energy Absorption",
+                    "description": "Converts a percentage of damage taken into energy for abilities, causing Ionize.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "energy_regeneration": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Charged State",
+                    "description": "Gradually builds up a plasma charge that enhances the next attack.",
+                    "keywords": [],
+                    "stats": {
+                        "damage_increase": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Electro Feedback",
+                    "description": "Each time you take damage, there's a chance to release a shockwave that damages nearby enemies, causing Overload.",
+                    "keywords": ["overload"],
+                    "stats": {
+                        "damage": {
+                            "value": 60,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 4,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 15,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "keywords": ["ionize"]
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Plasma Surge",
+                    "description": "Temporarily increases allies' plasma damage and grants a chance to ionize enemies on hit, causing Ionize.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "damage_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "ionize_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Energy Transfer",
+                    "description": "Transfers a portion of your energy to allies, boosting their ability recharge rate, causing Supernova.",
+                    "keywords": ["supernova"],
+                    "effect": {
+                        "energy_transfer": {
+                            "value": 10,
+                            "type": "percent"
+                        },
+                        "cooldown_reduction": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Plasma Storm",
+                "description": "Summons a colossal storm of plasma energy that strikes the battlefield with continuous lightning bolts and plasma bursts, causing massive area damage and overloading enemies with plasma energy. The storm also boosts allies' attack speeds and energy regeneration rates. This ability uses the Ionize and Overload keywords.",
+                "keywords": ["ionize", "overload"],
+                "synergy": "Amplifies the effects of Ionize and Overload, causing chain reactions and massive area damage. The boosted attack speed and energy regeneration synergize with Plasma Surge and Energy Transfer, enhancing both offensive and support capabilities.",
+                "stats": {
+                    "damage": {
+                        "value": 200,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 20,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 60,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Supreme enemy clear and area denial, with strong offensive boosts and support for allies."
+            },
+            {
+                "name": "Supernova Cascade",
+                "description": "Triggers a series of powerful plasma explosions that cascade across the battlefield, dealing immense damage to all enemies caught in the blasts. Each explosion charges allies' abilities, reducing cooldowns significantly. This ability uses the Supernova keyword.",
+                "keywords": ["supernova"],
+                "synergy": "Works well with Supernova for massive area damage and Energy Absorption to rapidly recharge abilities. The cooldown reduction synergizes with Plasma Barrier to maintain defensive integrity.",
+                "stats": {
+                    "damage": {
+                        "value": 250,
+                        "type": "damage"
+                    },
+                    "cooldown_reduction": {
+                        "value": 30,
+                        "type": "percent"
+                    },
+                    "cooldown": {
+                        "value": 90,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Combination of supreme enemy clear and rapid ability recharge for allies, making it highly effective in prolonged battles and boss fights."
+            }
+        ]
+    }
+}

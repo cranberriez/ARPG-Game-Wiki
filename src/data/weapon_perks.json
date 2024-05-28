@@ -1,0 +1,974 @@
+{
+	"perks": {
+		"berserker_rage": {
+			"name": "Berserker Rage",
+			"description": "Increases weapon damage when health is low.",
+			"activation": "low_health",
+            "requirement": {
+                "type": "health",
+                "value": "50"
+            },
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 20,
+					"type": "percent"
+				}
+			}
+		},
+		"healing_touch": {
+			"name": "Healing Touch",
+			"description": "Slightly heals the user on every hit.",
+			"activation": "hit",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "heal",
+			"effects": {
+				"heal": {
+					"value": 5,
+					"type": "percent"
+				}
+			}
+		},
+		"quick_reflexes": {
+			"name": "Quick Reflexes",
+			"description": "Increases weapon handling speed and reload speed.",
+			"activation": "none",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"handling_speed": {
+					"value": 10,
+					"type": "percent"
+				},
+				"reload_speed": {
+					"value": 15,
+					"type": "percent"
+				}
+			}
+		},
+		"sharpshooter": {
+			"name": "Sharpshooter",
+			"description": "Increases weapon accuracy and reduces recoil.",
+			"activation": "none",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"accuracy": {
+					"value": 15,
+					"type": "percent"
+				},
+				"recoil_reduction": {
+					"value": 20,
+					"type": "percent"
+				}
+			}
+		},
+		"warriors_strength": {
+			"name": "Warrior's Strength",
+			"description": "Increases melee weapon damage while decreasing block effectives.",
+			"activation": "none",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"melee_damage": {
+					"value": 15,
+					"type": "percent"
+				},
+                "block_effectiveness": {
+					"value": -20,
+					"type": "percent"
+				}
+			}
+		},
+		"adrenaline_rush": {
+			"name": "Adrenaline Rush",
+			"description": "Increases attack speed for a short duration after getting a kill.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"attack_speed": {
+					"value": 25,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"reload_frenzy": {
+			"name": "Reload Frenzy",
+			"description": "Increases weapon damage for a short duration after reloading.",
+			"activation": "reload",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 25,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 3,
+					"type": "seconds"
+				}
+			}
+		},
+		"predators_instinct": {
+			"name": "Predator's Instinct",
+			"description": "Increases critical hit chance when near atleast 2 enemies.",
+			"activation": "near_enemy",
+            "requirement": {
+                "type": "range",
+                "value": "5"
+            },
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"critical_hit_chance": {
+					"value": 15,
+					"type": "percent"
+				}
+			}
+		},
+		"defensive_stance": {
+			"name": "Defensive Stance",
+			"description": "Increases block effectiveness and reduces damage taken while blocking with a sword.",
+			"activation": "block",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"block_effectiveness": {
+					"value": 25,
+					"type": "percent"
+				},
+				"damage_reduction": {
+					"value": 15,
+					"type": "percent"
+				}
+			}
+		},
+		"fleet_footed": {
+			"name": "Fleet Footed",
+			"description": "Increases movement speed for a short duration after a dodge.",
+			"activation": "dodge",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"movement_speed": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 5,
+					"type": "seconds"
+				}
+			}
+		},
+		"unstoppable_force": {
+			"name": "Unstoppable Force",
+			"description": "Increases weapon damage after breaking an enemy's shield.",
+			"activation": "break_shield",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 50,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"killing_spree": {
+			"name": "Killing Spree",
+			"description": "Increases damage output for a short duration after multiple kills.",
+			"activation": "multiple_kills",
+            "requirement": {
+                "type": "amount",
+                "value": "3"
+            },
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 30,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"chain_reaction": {
+			"name": "Chain Reaction",
+			"description": "Each kill causes a small explosion, dealing damage to nearby enemies.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "explosion",
+			"effects": {
+				"explosion_damage": {
+					"value": 40,
+					"type": "damage"
+				},
+				"explosion_radius": {
+					"value": 5,
+					"type": "range"
+				}
+			}
+		},
+		"focused_fury": {
+			"name": "Focused Fury",
+			"description": "Increases damage and accuracy when aiming down sights.",
+			"activation": "aim_down_sights",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 15,
+					"type": "percent"
+				},
+				"accuracy": {
+					"value": 20,
+					"type": "percent"
+				}
+			}
+		},
+		"rapid_recovery": {
+			"name": "Rapid Recovery",
+			"description": "Increases health regeneration rate for a short duration after a kill.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "none",
+			"effect_type": "heal",
+			"effects": {
+				"health_regen_rate": {
+					"value": 10,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"void_leech": {
+			"name": "Void Leech",
+			"description": "Heals a portion of the damage dealt with void weapons.",
+			"activation": "damage_dealt",
+			"cooldown": 0,
+			"class_restriction": "void",
+			"effect_type": "heal",
+			"effects": {
+				"heal": {
+					"value": 5,
+					"type": "percent"
+				}
+			}
+		},
+		"abyssal_momentum": {
+			"name": "Abyssal Momentum",
+			"description": "Increases movement speed after a kill with a void weapon.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "void",
+			"effect_type": "buff",
+			"effects": {
+				"movement_speed": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"void_infusion": {
+			"name": "Void Infusion",
+			"description": "Increases void damage when near an enemy affected by void abilities.",
+			"activation": "near_void_enemy",
+			"cooldown": 0,
+			"class_restriction": "void",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 25,
+					"type": "percent"
+				}
+			}
+		},
+		"echo_strike": {
+			"name": "Echo Strike",
+			"description": "Each kill has a chance to summon a void echo that attacks enemies.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "void",
+			"effect_type": "summon",
+			"effects": {
+				"echo_summon_chance": {
+					"value": 20,
+					"type": "percent"
+				},
+				"echo_damage": {
+					"value": 25,
+					"type": "damage"
+				}
+			}
+		},
+		"void_rebound": {
+			"name": "Void Rebound",
+			"description": "Returns a portion of damage dealt to the attacker as void energy.",
+			"activation": "damage_dealt",
+			"cooldown": 0,
+			"class_restriction": "void",
+			"effect_type": "damage_return",
+			"effects": {
+				"damage_return": {
+					"value": 10,
+					"type": "percent"
+				}
+			}
+		},
+		"overload_burst": {
+			"name": "Overload Burst",
+			"description": "Creates a small explosion on a critical hit with plasma weapons.",
+			"activation": "critical_hit",
+			"cooldown": 0,
+			"class_restriction": "plasma",
+			"effect_type": "explosion",
+			"effects": {
+				"explosion_damage": {
+					"value": 20,
+					"type": "percent"
+				},
+				"explosion_radius": {
+					"value": 5,
+					"type": "range"
+				}
+			}
+		},
+		"electrified_guard": {
+			"name": "Electrified Guard",
+			"description": "Generates a temporary shield that reduces incoming damage after a kill.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "plasma",
+			"effect_type": "shield",
+			"effects": {
+				"damage_reduction": {
+					"value": 15,
+					"type": "percent"
+				},
+				"shield_duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"charged_fury": {
+			"name": "Charged Fury",
+			"description": "Increases attack speed after a kill with a plasma weapon.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "plasma",
+			"effect_type": "buff",
+			"effects": {
+				"attack_speed": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"energy_overflow": {
+			"name": "Energy Overflow",
+			"description": "Increases energy regeneration rate for a short duration after a plasma kill.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "plasma",
+			"effect_type": "buff",
+			"effects": {
+				"energy_regen_rate": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"plasma_arc": {
+			"name": "Plasma Arc",
+			"description": "Chains lightning between enemies on hit.",
+			"activation": "hit",
+			"cooldown": 0,
+			"class_restriction": "plasma",
+			"effect_type": "damage",
+			"effects": {
+				"chain_damage": {
+					"value": 15,
+					"type": "percent"
+				},
+				"chain_range": {
+					"value": 10,
+					"type": "range"
+				}
+			}
+		},
+		"reflective_shards": {
+			"name": "Reflective Shards",
+			"description": "Reflects a portion of melee damage back to the attacker.",
+			"activation": "melee_hit",
+			"cooldown": 0,
+			"class_restriction": "crystal",
+			"effect_type": "damage_return",
+			"effects": {
+				"damage_return": {
+					"value": 15,
+					"type": "percent"
+				}
+			}
+		},
+		"crystalize": {
+			"name": "Crystalize",
+			"description": "Grants temporary damage resistance after blocking with a crystal weapon.",
+			"activation": "block",
+			"cooldown": 0,
+			"class_restriction": "crystal",
+			"effect_type": "buff",
+			"effects": {
+				"damage_resistance": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"shard_burst": {
+			"name": "Shard Burst",
+			"description": "Creates a burst of crystal shards on a critical hit.",
+			"activation": "critical_hit",
+			"cooldown": 0,
+			"class_restriction": "crystal",
+			"effect_type": "damage",
+			"effects": {
+				"burst_damage": {
+					"value": 20,
+					"type": "percent"
+				},
+				"burst_radius": {
+					"value": 5,
+					"type": "range"
+				}
+			}
+		},
+		"piercing_shards": {
+			"name": "Piercing Shards",
+			"description": "Increases penetration, allowing projectiles to pierce through multiple enemies.",
+			"activation": "hit",
+			"cooldown": 0,
+			"class_restriction": "crystal",
+			"effect_type": "damage",
+			"effects": {
+				"penetration": {
+					"value": 3,
+					"type": "enemies"
+				}
+			}
+		},
+		"crystal_harmony": {
+			"name": "Crystal Harmony",
+			"description": "Increases weapon handling and reload speed when near a teammate.",
+			"activation": "near_teammate",
+			"cooldown": 0,
+			"class_restriction": "crystal",
+			"effect_type": "buff",
+			"effects": {
+				"handling_speed": {
+					"value": 10,
+					"type": "percent"
+				},
+				"reload_speed": {
+					"value": 15,
+					"type": "percent"
+				}
+			}
+		},
+		"fear_strike": {
+			"name": "Fear Strike",
+			"description": "Causes fear in enemies after a critical hit with a shadow weapon.",
+			"activation": "critical_hit",
+			"cooldown": 0,
+			"class_restriction": "shadow",
+			"effect_type": "debuff",
+			"effects": {
+				"fear_duration": {
+					"value": 5,
+					"type": "seconds"
+				}
+			}
+		},
+		"umbral_shield": {
+			"name": "Umbral Shield",
+			"description": "Grants a shadowy shield reducing incoming melee damage after a kill.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "shadow",
+			"effect_type": "shield",
+			"effects": {
+				"melee_damage_reduction": {
+					"value": 20,
+					"type": "percent"
+				},
+				"shield_duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"shadow_step": {
+			"name": "Shadow Step",
+			"description": "Increases dodge chance and movement speed after a kill with a shadow weapon.",
+			"activation": "kill",
+			"cooldown": 0,
+			"class_restriction": "shadow",
+			"effect_type": "buff",
+			"effects": {
+				"dodge_chance": {
+					"value": 15,
+					"type": "percent"
+				},
+				"movement_speed": {
+					"value": 20,
+					"type": "percent"
+				},
+				"duration": {
+					"value": 10,
+					"type": "seconds"
+				}
+			}
+		},
+		"nightmare_infusion": {
+			"name": "Nightmare Infusion",
+			"description": "Increases shadow damage when near an enemy affected by shadow abilities.",
+			"activation": "near_shadow_enemy",
+			"cooldown": 0,
+			"class_restriction": "shadow",
+			"effect_type": "buff",
+			"effects": {
+				"damage": {
+					"value": 25,
+					"type": "percent"
+				}
+			}
+		},
+		"shadows_embrace": {
+			"name": "Shadow's Embrace",
+			"description": "Temporarily increases invisibility duration after a critical hit.",
+			"activation": "critical_hit",
+			"cooldown": 0,
+			"class_restriction": "shadow",
+			"effect_type": "buff",
+			"effects": {
+				"invisibility_duration": {
+					"value": 8,
+					"type": "seconds"
+				}
+			}
+		},
+        "blade_dance": {
+            "name": "Blade Dance",
+            "description": "Increases damage and attack speed significantly for a short duration after successfully dodging an attack.",
+            "activation": "dodge",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "damage": {
+                    "value": 25,
+                    "type": "percent"
+                },
+                "attack_speed": {
+                    "value": 50,
+                    "type": "percent"
+                },
+                "duration": {
+                    "value": 5,
+                    "type": "seconds"
+                }
+            }
+        },
+        "assassins_mark": {
+            "name": "Assassin's Mark",
+            "description": "Each kill marks a target, increasing damage dealt to marked targets for a short duration.",
+            "activation": "kill",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "damage": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "duration": {
+                    "value": 10,
+                    "type": "seconds"
+                }
+            }
+        },
+        "silent_strike": {
+            "name": "Silent Strike",
+            "description": "Increases critical hit chance and damage when attacking from behind.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "critical_hit_chance": {
+                    "value": 30,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 50,
+                    "type": "percent"
+                }
+            }
+        },
+        "quick_draw": {
+            "name": "Quick Draw",
+            "description": "Significantly increases weapon swap and draw speed.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "weapon_swap_speed": {
+                    "value": 50,
+                    "type": "percent"
+                },
+                "weapon_draw_speed": {
+                    "value": 50,
+                    "type": "percent"
+                }
+            }
+        },
+        "last_stand": {
+            "name": "Last Stand",
+            "description": "Increases damage and fire rate significantly when health is below 25%.",
+            "activation": "low_health",
+            "requirement": {
+                "type": "health",
+                "value": "25"
+            },
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "damage": {
+                    "value": 50,
+                    "type": "percent"
+                },
+                "fire_rate": {
+                    "value": 50,
+                    "type": "percent"
+                }
+            }
+        },
+        "power_punch": {
+            "name": "Power Punch",
+            "description": "Significantly increases damage and knockback on the next melee hit after blocking an attack.",
+            "activation": "block",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "damage": {
+                    "value": 100,
+                    "type": "percent"
+                },
+                "knockback": {
+                    "value": 50,
+                    "type": "percent"
+                }
+            }
+        },
+        "elemental_fist": {
+            "name": "Elemental Fist",
+            "description": "Each melee hit has a chance to trigger a small elemental explosion.",
+            "activation": "hit",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "explosion",
+            "effects": {
+                "explosion_damage": {
+                    "value": 20,
+                    "type": "damage"
+                },
+                "chance_to_trigger": {
+                    "value": 20,
+                    "type": "percent"
+                }
+            }
+        },
+        "precision_strike": {
+            "name": "Precision Strike",
+            "description": "Increases critical hit damage when aiming down sights.",
+            "activation": "aim_down_sights",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "critical_hit_damage": {
+                    "value": 30,
+                    "type": "percent"
+                }
+            }
+        },
+        "suppressive_fire": {
+            "name": "Suppressive Fire",
+            "description": "Each hit reduces the target's movement speed and accuracy.",
+            "activation": "hit",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "debuff",
+            "effects": {
+                "movement_speed_reduction": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "accuracy_reduction": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "duration": {
+                    "value": 5,
+                    "type": "seconds"
+                }
+            }
+        },
+        "arcane_surge": {
+            "name": "Arcane Surge",
+            "description": "Increases ability recharge rate after getting a kill with the staff.",
+            "activation": "kill",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "ability_recharge_rate": {
+                    "value": 50,
+                    "type": "percent"
+                },
+                "duration": {
+                    "value": 10,
+                    "type": "seconds"
+                }
+            }
+        },
+        "mystic_barrier": {
+            "name": "Mystic Barrier",
+            "description": "Creates a small shield around the user that absorbs a portion of incoming damage.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "shield",
+            "effects": {
+                "shield_strength": {
+                    "value": 100,
+                    "type": "damage"
+                },
+                "duration": {
+                    "value": 10,
+                    "type": "seconds"
+                }
+            }
+        },
+        "piercing_arrows": {
+            "name": "Piercing Arrows",
+            "description": "Arrows pierce through multiple enemies, dealing damage to all.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "pierce_targets": {
+                    "value": 3,
+                    "type": "targets"
+                }
+            }
+        },
+        "explosive_arrows": {
+            "name": "Explosive Arrows",
+            "description": "Arrows explode on impact, dealing area damage.",
+            "activation": "hit",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "explosion",
+            "effects": {
+                "explosion_damage": {
+                    "value": 50,
+                    "type": "damage"
+                },
+                "explosion_radius": {
+                    "value": 5,
+                    "type": "range"
+                }
+            }
+        },
+        "scattershot": {
+            "name": "Scattershot",
+            "description": "Increases pellet spread and damage.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "pellet_spread": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "damage": {
+                    "value": 20,
+                    "type": "percent"
+                }
+            }
+        },
+        "blast_radius": {
+            "name": "Blast Radius",
+            "description": "Increases the area of effect for each shot, dealing more damage to nearby enemies.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "area_of_effect": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "damage": {
+                    "value": 20,
+                    "type": "percent"
+                }
+            }
+        },
+        "smash_impact": {
+            "name": "Smash Impact",
+            "description": "Increases area of effect and damage on heavy attacks.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+                "area_of_effect": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "damage": {
+                    "value": 20,
+                    "type": "percent"
+                }
+            }
+        },
+        "earthshaker": {
+            "name": "Earthshaker",
+            "description": "Each heavy attack creates a shockwave that knocks down enemies.",
+            "activation": "hit",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "debuff",
+            "effects": {
+                "shockwave_damage": {
+                    "value": 50,
+                    "type": "damage"
+                },
+                "knockdown_duration": {
+                    "value": 2,
+                    "type": "seconds"
+                }
+            }
+        },
+        "elemental_mastery": {
+            "name": "Elemental Mastery",
+            "description": "Increases the effectiveness of elemental abilities, providing a boost to elemental damage and duration.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+              "elemental_damage": {
+                "value": 20,
+                "type": "percent"
+              },
+              "elemental_duration": {
+                "value": 15,
+                "type": "percent"
+              }
+            }
+          },
+          "mana_shield": {
+            "name": "Mana Shield",
+            "description": "Creates a protective shield that absorbs damage, converting it into mana. The shield lasts for a limited duration or until its capacity is reached.",
+            "activation": "none",
+            "cooldown": 30,
+            "class_restriction": "none",
+            "effect_type": "shield",
+            "effects": {
+              "shield_strength": {
+                "value": 100,
+                "type": "damage"
+              },
+              "duration": {
+                "value": 10,
+                "type": "seconds"
+              },
+              "mana_conversion": {
+                "value": 50,
+                "type": "percent"
+              }
+            }
+          },
+          "vitality_boost": {
+            "name": "Vitality Boost",
+            "description": "Increases maximum health and provides health regeneration over time, enhancing survivability in combat.",
+            "activation": "none",
+            "cooldown": 0,
+            "class_restriction": "none",
+            "effect_type": "buff",
+            "effects": {
+              "health": {
+                "value": 20,
+                "type": "percent"
+              },
+              "health_regeneration": {
+                "value": 5,
+                "type": "percent"
+              }
+            }
+          }
+	}
+}

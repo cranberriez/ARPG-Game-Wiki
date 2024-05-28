@@ -1,0 +1,44 @@
+{
+    "keys": {
+        "activation": "Activates When:",
+        "invisibility": "Invisibility Duration",
+        "melee_damage": "Melee Damage",
+        "health_regen_rate": "Health Regeneration Rate"
+    },
+    "values": {
+        "none": "This effect is always active",
+        "taking_damage": "This effect occurs when taking damage",
+        "dodge": "This effect occurs after dodging or dodging an attack",
+        "low_health": "This effect occurs when health is below 50%",
+        "hit": "This effect occurs on hit",
+        "kill": "This effect occurs on kill",
+        "reload": "This effect occurs after reloading",
+        "near_enemy": "This effect occurs when near an enemy",
+        "break_shield": "This effect occurs after breaking an enemy's shield",
+        "multiple_kills": "This effect occurs after multiple (3) kills",
+        "aim_down_sights": "This effect occurs when aiming down sights",
+        "damage_dealt": "This effect occurs when dealing damage",
+        "near_void_enemy": "This effect occurs when near an enemy affected by void abilities",
+        "near_shadow_enemy": "This effect occurs when near an enemy affected by shadow abilities",
+        "near_teammate": "This effect occurs when near a teammate",
+        "melee_hit": "This effect occurs when hit by a melee attack",
+        "critical_hit": "This effect occurs on a critical hit",
+        "block": "This effect occurs when blocking"
+    },
+    "effect_types": {
+        "buff": "Temporary increase to a stat or attribute",
+        "heal": "Restores health",
+        "explosion": "Causes an explosion dealing area damage",
+        "summon": "Summons an entity",
+        "damage_return": "Returns a portion of damage to the attacker",
+        "shield": "Provides a temporary shield",
+        "debuff": "Inflicts a negative effect on enemies"
+    },
+    "types": {
+        "percent": "%",
+        "seconds": "s",
+        "range": "meters",
+        "damage": "hp",
+        "hits_per_second": "hits/s"
+    }
+}

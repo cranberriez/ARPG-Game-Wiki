@@ -1,0 +1,27 @@
+/* Stats List Styles */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.stat-item {
+    margin-bottom: 5px;
+}
+
+.stat-name {
+    font-weight: bold;
+    color: #bdc3c7; /* Light teal */
+}
+
+.stat-value {
+    color: #bdc3c7; /* Light gray */
+}
+
+.pos-stat {
+    color: lightgreen;
+}
+
+.neg-stat {
+    color: red;
+}

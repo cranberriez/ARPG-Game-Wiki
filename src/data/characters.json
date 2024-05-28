@@ -1,0 +1,143 @@
+{
+	"characters": [
+		{
+			"name": "Rogue",
+			"traits": [
+			{
+				"name": "Shadow Step",
+				"description": "Gains a brief burst of increased movement speed and invisibility when dodging.",
+				"activation": "dodge",
+				"effects": {
+					"movement_speed": {
+						"type": "percent",
+						"value": 10
+					},
+					"invisibility": {
+						"type": "time",
+						"value": 8
+					}
+				}
+			}
+			]
+		},
+		{
+			"name": "Mage",
+			"traits": [
+			{
+				"name": "Arcane Reservoir",
+				"description": "Increases maximum energy capacity, allowing the mage to use abilities more frequently or for a longer duration.",
+				"activation": "none",
+				"effects": {
+					"energy_capacity": {
+						"type": "percent",
+						"value": 50
+					}
+				}
+			}
+			]
+		},
+		{
+			"name": "Knight",
+			"traits": [
+			{
+				"name": "Shield Wall",
+				"description": "Provides a passive bonus to damage reduction, making the knight more resilient in combat.",
+				"activation": "none",
+				"effects": {
+					"damage_reduction": {
+						"type": "percent",
+						"value": 20
+					}
+				}
+			}
+			]
+		},
+		{
+			"name": "Ranger",
+			"traits": [
+			{
+				"name": "Eagle Eye",
+				"description": "Increases critical hit chance and accuracy when using ranged weapons.",
+				"activation": "ranged_weapon",
+				"effects": {
+					"critical_hit_chance": {
+						"type": "percent",
+						"value": 15
+					},
+					"accuracy": {
+						"type": "percent",
+						"value": 20
+					}
+				}
+			}
+			]
+		},
+		{
+			"name": "Berserker",
+			"traits": [
+			{
+				"name": "Rage Frenzy",
+				"description": "Increases attack speed and damage for a short duration after taking damage.",
+				"activation": "taking_damage",
+				"effects": {
+					"attack_speed": {
+						"type": "percent",
+						"value": 25
+					},
+					"damage": {
+						"type": "percent",
+						"value": 20
+					},
+					"duration": {
+						"type": "time",
+						"value": 10
+					}
+				}
+			}
+			]
+		},
+		{
+			"name": "Engineer",
+			"traits": [
+				{
+					"name": "Field Maintenance",
+					"description": "Reduces cooldowns of abilities and slightly increases the duration of weapon elemental effects.",
+					"activation": "none",
+					"effects": {
+						"cooldown_reduction": {
+							"type": "percent",
+							"value": 10
+						},
+						"elemental_effect_duration": {
+							"type": "percent",
+							"value": 20
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Alchemist",
+			"traits": [
+			{
+				"name": "Elemental Mastery",
+				"description": "Grants a chance for elemental effects to trigger an additional time, doubling the impact of elemental attacks.",
+				"activation": "none",
+				"effects": {
+					"elemental_effect_trigger_chance": {
+						"type": "percent",
+						"value": 20
+					}
+				},
+				"secondary_effects": {
+					"elemental_second_trigger_damage": {
+						"type": "percent",
+						"value": 100
+					}
+				}
+			}
+			]
+		}
+	]
+  }
+  

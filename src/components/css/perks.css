@@ -1,0 +1,40 @@
+.perk-category {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perk-description {
+    padding: 20px;
+    border: 1px solid gray;
+    width: 50%;
+
+    box-sizing: border-box;
+}
+
+.perk-description h4 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.perk-col-cont {
+    display: flex;
+    gap: 5%;
+}
+
+.perk-column .perk-activation {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.perk-column p {
+    text-wrap: wrap;
+    margin: 0;
+}
+
+.perk-column ul {
+    margin: 0;
+}
+
+.perk-column:nth-child(1) {
+    width: 45%;
+}

@@ -1,0 +1,340 @@
+{
+    "crystal": {
+        "keywords": {
+            "shatter": {
+                "name": "Shatter",
+                "description": "Causes crystal shards to explode, dealing area damage and possibly leaving behind dangerous crystal fragments that damage enemies over time.",
+                "stats": {
+                    "damage": {
+                        "value": 40,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 5,
+                        "type": "seconds"
+                    }
+                }
+            },
+            "pierce": {
+                "name": "Pierce",
+                "description": "Launches sharp crystal shards that pierce through enemies, dealing damage and potentially causing bleeding or additional damage over time.",
+                "stats": {
+                    "damage": {
+                        "value": 30,
+                        "type": "damage"
+                    },
+                    "bleed_damage": {
+                        "value": 10,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 8,
+                        "type": "seconds"
+                    }
+                }
+            },
+            "radiance": {
+                "name": "Radiance",
+                "description": "Fires a concentrated beam of crystal energy that deals continuous damage to enemies in its path, potentially piercing through multiple targets.",
+                "stats": {
+                    "damage": {
+                        "value": 50,
+                        "type": "damage"
+                    },
+                    "pierce_targets": {
+                        "value": 3,
+                        "type": "targets"
+                    },
+                    "duration": {
+                        "value": 6,
+                        "type": "seconds"
+                    }
+                }
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Crystal Shard",
+                    "description": "Fires a sharp crystal shard that pierces through enemies, causing Pierce.",
+                    "keywords": ["pierce"],
+                    "stats": {
+                        "damage": {
+                            "value": 50,
+                            "type": "damage"
+                        },
+                        "cooldown": {
+                            "value": 4,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Crystal Nova",
+                    "description": "Creates a nova of crystal energy, damaging and slowing enemies in a radius, causing Shatter.",
+                    "keywords": ["shatter"],
+                    "stats": {
+                        "damage": {
+                            "value": 60,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 5,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 8,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "keywords": ["pierce"]
+                    }
+                },
+                {
+                    "name": "Crystal Grenade",
+                    "description": "Throws a grenade that shatters into shards, causing area damage and Shatter.",
+                    "keywords": ["shatter"],
+                    "stats": {
+                        "damage": {
+                            "value": 80,
+                            "type": "damage"
+                        },
+                        "radius": {
+                            "value": 6,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 12,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 25,
+                            "type": "percent"
+                        },
+                        "keywords": ["radiance"]
+                    }
+                },
+                {
+                    "name": "Crystal Spikes",
+                    "description": "Summons spikes from the ground, impaling and damaging enemies in a line, causing Radiance.",
+                    "keywords": ["radiance"],
+                    "stats": {
+                        "damage": {
+                            "value": 90,
+                            "type": "damage"
+                        },
+                        "range": {
+                            "value": 7,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 15,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Crystal Armor",
+                    "description": "Reduces damage taken and reflects a portion of melee damage, causing Shatter.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "damage_return": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Shard Shield",
+                    "description": "Creates a shield of crystal shards that absorbs damage, causing Pierce.",
+                    "keywords": ["pierce"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "stats": {
+                        "shield_strength": {
+                            "value": 100,
+                            "type": "damage"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Crystalline Guard",
+                    "description": "Summons crystal barriers that block incoming attacks, causing Radiance.",
+                    "keywords": ["radiance"],
+                    "stats": {
+                        "barrier_strength": {
+                            "value": 150,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 15,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 25,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Prismatic Defense",
+                    "description": "Increases resistance to elemental damage, causing Radiance.",
+                    "keywords": ["radiance"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Shard Regeneration",
+                    "description": "Gradually regenerates health when near crystal structures, causing Shatter.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "health_regen_rate": {
+                            "value": 5,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Reflective Crystal",
+                    "description": "Each time you block or absorb damage, there's a chance to reflect the damage back to the attacker, causing Pierce.",
+                    "keywords": ["pierce"],
+                    "effect": {
+                        "damage_return_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Crystal Fortification",
+                    "description": "Temporarily increases allies' armor and damage resistance, causing Radiance.",
+                    "keywords": ["radiance"],
+                    "effect": {
+                        "armor_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Refractive Aura",
+                    "description": "Creates an aura that deflects a percentage of incoming projectiles for allies within range, causing Shatter.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "projectile_deflection": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Crystalline Dominion",
+                "description": "Envelops the battlefield in a dome of radiant crystal energy, dealing continuous damage to enemies inside while simultaneously fortifying allies with crystal armor that reflects damage and increases resilience. The dome periodically erupts with crystal spikes, impaling and stunning enemies. This ability uses the Shatter and Radiance keywords.",
+                "keywords": ["shatter", "radiance"],
+                "synergy": "Enhances the effects of Shatter and Pierce, providing sustained damage and crowd control. The crystal armor boosts the effectiveness of Crystal Armor and Shard Shield, offering significant defensive and support benefits.",
+                "stats": {
+                    "damage": {
+                        "value": 100,
+                        "type": "damage"
+                    },
+                    "reflect_damage": {
+                        "value": 15,
+                        "type": "percent"
+                    },
+                    "duration": {
+                        "value": 20,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 60,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Combination of supreme enemy clear, crowd control, and powerful defensive support for allies, making it ideal for both boss encounters and large groups of enemies."
+            },
+            {
+                "name": "Prismatic Overcharge",
+                "description": "Channels an immense amount of crystal energy into a prismatic beam that sweeps across the battlefield, dealing continuous damage to enemies and healing allies caught in the beam. The beam also increases allies' critical hit chances. This ability uses the Radiance keyword.",
+                "keywords": ["radiance"],
+                "synergy": "Works well with Radiance for sustained damage and Reflective Crystal for additional damage reflection. The critical hit chance increase synergizes with Crystal Fortification to maximize damage output.",
+                "stats": {
+                    "damage": {
+                        "value": 120,
+                        "type": "damage"
+                    },
+                    "heal": {
+                        "value": 50,
+                        "type": "percent"
+                    },
+                    "critical_hit_chance": {
+                        "value": 20,
+                        "type": "percent"
+                    },
+                    "duration": {
+                        "value": 15,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 90,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Combination of sustained enemy damage, healing support, and critical hit enhancement, making it effective for both boss damage and supporting allies."
+            }
+        ]
+    }
+}

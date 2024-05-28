@@ -1,0 +1,23 @@
+.category-label {
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.category-label::before {
+    content: '>';
+    font-family: monospace;
+    position: absolute;
+    left: -15px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%) rotateZ(0deg);
+    transition: transform 200ms;
+}
+
+.category-label.open::before {
+    transform: translateY(-50%) rotateZ(90deg);
+}

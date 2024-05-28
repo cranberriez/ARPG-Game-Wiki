@@ -1,0 +1,729 @@
+{
+    "void": {
+        "keywords": {
+            "drain": {
+                "name": "Drain",
+                "description": "Drains a small amount of life force from enemies, dealing damage over time and healing the user for a portion of the damage dealt.",
+                "effects": {
+                    "": ""
+                }
+            },
+            "oblivion": {
+                "name": "Oblivion",
+                "description": "Creates a void field that disorients enemies, dealing damage and reducing their accuracy and movement speed."
+            },
+            "annihilation": {
+                "name": "Annihilation",
+                "description": "Summons a black hole or a powerful void energy attack that deals massive damage and pulls enemies towards the center, causing area damage."
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Void Blast",
+                    "description": "Fires a concentrated beam of void energy, dealing significant damage to a single target, causing Drain.",
+                    "keywords": ["drain"],
+                    "stats": {
+                        "damage": {
+                            "value": 150,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 5,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Pulse",
+                    "description": "Releases a pulse of void energy, damaging and disorienting enemies in a cone, causing Oblivion.",
+                    "keywords": ["oblivion"],
+                    "stats": {
+                        "damage": {
+                            "value": 80,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 6,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 12,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Grenade",
+                    "description": "Throws a grenade that creates a void explosion, causing Oblivion in the center and to any killed opponents.",
+                    "keywords": ["oblivion"],
+                    "stats": {
+                        "damage": {
+                            "value": 100,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 8,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 15,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Lash",
+                    "description": "Extends a tendril of void energy to whip and damage enemies in a line, causing Annihilation on its final hit.",
+                    "keywords": ["annihilation"],
+                    "stats": {
+                        "damage": {
+                            "value": 120,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 4,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Void Shield",
+                    "description": "Reduces damage taken from attacks.",
+                    "keywords": [],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Displacement",
+                    "description": "Temporarily phases the user out of reality, avoiding all damage.",
+                    "keywords": [],
+                    "stats": {
+                        "duration": {
+                            "value": 3,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Abyssal Guard",
+                    "description": "Summons void energy that reflects some incoming damage and reflects a portion back to the attacker, causing Drain.",
+                    "keywords": ["drain"],
+                    "effect": {
+                        "damage_return": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 12,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 25,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Ethereal Step",
+                    "description": "Grants a small chance to dodge attacks by phasing momentarily.",
+                    "keywords": [],
+                    "effect": {
+                        "dodge_chance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Resilience",
+                    "description": "Increases resistance to all elemental damage.",
+                    "keywords": [],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Echo of the Void",
+                    "description": "Each time you deal damage, there's a chance to summon a void echo that attacks enemies, causing Annihilation.",
+                    "keywords": ["annihilation"],
+                    "stats": {
+                        "chance": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Voidwalk",
+                    "description": "Allows the user to teleport short distances, evading attacks.",
+                    "keywords": [],
+                    "stats": {
+                        "range": {
+                            "value": 15,
+                            "type": "meters"
+                        },
+                        "cooldown": {
+                            "value": 8,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Temporal Distortion",
+                    "description": "Slows down enemies in a radius, reducing their attack and movement speed.",
+                    "keywords": [],
+                    "stats": {
+                        "radius": {
+                            "value": 10,
+                            "type": "meters"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Void Maelstrom",
+                "description": "Summons a swirling maelstrom of void energy that hovers over the battlefield, dealing continuous damage to enemies caught within its vortex. The maelstrom also periodically sends out waves of void energy that disrupt enemy abilities and reduce their defenses, causing Drain and Oblivion.",
+                "keywords": ["drain", "oblivion"],
+                "synergy": "Combines with Drain to amplify healing effects and increase damage over time. The defense reduction enhances the effectiveness of all void-based attacks, making Void Shield and Abyssal Guard more potent.",
+                "stats": {
+                    "damage": {
+                        "value": 200,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 15,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 60,
+                        "type": "seconds"
+                    }
+                }
+            }
+        ]
+    },
+    "plasma": {
+        "keywords": {
+            "ionize": {
+                "name": "Ionize",
+                "description": "Charges enemies with plasma, dealing damage over time and making them more vulnerable to subsequent plasma attacks."
+            },
+            "overload": {
+                "name": "Overload",
+                "description": "Causes plasma-charged enemies to explode upon death or after a set duration, dealing area damage to nearby enemies."
+            },
+            "supernova": {
+                "name": "Supernova",
+                "description": "Creates a massive plasma explosion that deals heavy area damage, often with a lingering effect that continues to damage enemies caught in the blast."
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Plasma Bolt",
+                    "description": "Fires a bolt of plasma energy, dealing continuous damage over time. This ability uses the Ionize keyword.",
+                    "keywords": ["ionize"]
+                },
+                {
+                    "name": "Plasma Burst",
+                    "description": "Releases a burst of plasma that damages enemies in a radius. This ability uses the Overload keyword.",
+                    "keywords": ["overload"]
+                },
+                {
+                    "name": "Plasma Grenade",
+                    "description": "Throws a grenade that releases a plasma explosion, causing area damage. This ability uses the Overload keyword.",
+                    "keywords": ["overload"]
+                },
+                {
+                    "name": "Plasma Wave",
+                    "description": "Sends a wave of plasma energy forward, damaging and knocking back enemies. This ability uses the Supernova keyword.",
+                    "keywords": ["supernova"]
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Plasma Shield",
+                    "description": "Reduces damage taken from attacks. This ability uses the Ionize keyword.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Reactive Armor",
+                    "description": "Reflects a portion of plasma damage back to attackers. This ability uses the Overload keyword.",
+                    "keywords": ["overload"],
+                    "effect": {
+                        "damage_return": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Plasma Barrier",
+                    "description": "Creates a barrier that absorbs damage and releases a plasma burst when broken. This ability uses the Supernova keyword.",
+                    "keywords": ["supernova"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Energy Absorption",
+                    "description": "Converts a percentage of damage taken into energy for abilities. This ability uses the Ionize keyword.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "energy_regeneration": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Charged State",
+                    "description": "Gradually builds up a plasma charge that enhances the next attack.",
+                    "keywords": []
+                },
+                {
+                    "name": "Electro Feedback",
+                    "description": "Each time you take damage, there's a chance to release a shockwave that damages nearby enemies. This ability uses the Overload keyword.",
+                    "keywords": ["overload"]
+                }
+            ],
+            "support": [
+                {
+                    "name": "Plasma Surge",
+                    "description": "Temporarily increases allies' plasma damage and grants a chance to ionize enemies on hit. This ability uses the Ionize keyword.",
+                    "keywords": ["ionize"],
+                    "effect": {
+                        "damage_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "ionize_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Energy Transfer",
+                    "description": "Transfers a portion of your energy to allies, boosting their ability recharge rate. This ability uses the Supernova keyword.",
+                    "keywords": ["supernova"],
+                    "effect": {
+                        "energy_transfer": {
+                            "value": 10,
+                            "type": "percent"
+                        },
+                        "cooldown_reduction": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Plasma Storm",
+                "description": "Summons a colossal storm of plasma energy that strikes the battlefield with continuous lightning bolts and plasma bursts, causing massive area damage and overloading enemies with plasma energy. The storm also boosts allies' attack speeds and energy regeneration rates. This ability uses the Ionize and Overload keywords.",
+                "keywords": ["ionize", "overload"],
+                "synergy": "Amplifies the effects of Ionize and Overload, causing chain reactions and massive area damage. The boosted attack speed and energy regeneration synergize with Plasma Surge and Energy Transfer, enhancing both offensive and support capabilities.",
+                "subtext": "Supreme enemy clear and area denial, with strong offensive boosts and support for allies."
+            },
+            {
+                "name": "Supernova Cascade",
+                "description": "Triggers a series of powerful plasma explosions that cascade across the battlefield, dealing immense damage to all enemies caught in the blasts. Each explosion charges allies' abilities, reducing cooldowns significantly. This ability uses the Supernova keyword.",
+                "keywords": ["supernova"],
+                "synergy": "Works well with Supernova for massive area damage and Energy Absorption to rapidly recharge abilities. The cooldown reduction synergizes with Plasma Barrier to maintain defensive integrity.",
+                "subtext": "Combination of supreme enemy clear and rapid ability recharge for allies, making it highly effective in prolonged battles and boss fights."
+            }
+        ]
+    },
+    "crystal": {
+        "keywords": {
+            "shatter": {
+                "name": "Shatter",
+                "description": "Causes crystal shards to explode, dealing area damage and possibly leaving behind dangerous crystal fragments that damage enemies over time."
+            },
+            "pierce": {
+                "name": "Pierce",
+                "description": "Launches sharp crystal shards that pierce through enemies, dealing damage and potentially causing bleeding or additional damage over time."
+            },
+            "radiance": {
+                "name": "Radiance",
+                "description": "Fires a concentrated beam of crystal energy that deals continuous damage to enemies in its path, potentially piercing through multiple targets."
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Crystal Shard",
+                    "description": "Fires a sharp crystal shard that pierces through enemies. This ability uses the Pierce keyword.",
+                    "keywords": ["pierce"]
+                },
+                {
+                    "name": "Crystal Nova",
+                    "description": "Creates a nova of crystal energy, damaging and slowing enemies in a radius. This ability uses the Shatter keyword.",
+                    "keywords": ["shatter"]
+                },
+                {
+                    "name": "Crystal Grenade",
+                    "description": "Throws a grenade that shatters into shards, causing area damage. This ability uses the Shatter keyword.",
+                    "keywords": ["shatter"]
+                },
+                {
+                    "name": "Crystal Spikes",
+                    "description": "Summons spikes from the ground, impaling and damaging enemies in a line. This ability uses the Radiance keyword.",
+                    "keywords": ["radiance"]
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Crystal Armor",
+                    "description": "Reduces damage taken and reflects a portion of melee damage. This ability uses the Shatter keyword.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "damage_return": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Shard Shield",
+                    "description": "Creates a shield of crystal shards that absorbs damage. This ability uses the Pierce keyword.",
+                    "keywords": ["pierce"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Crystalline Guard",
+                    "description": "Summons crystal barriers that block incoming attacks. This ability uses the Radiance keyword.",
+                    "keywords": ["radiance"]
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Prismatic Defense",
+                    "description": "Increases resistance to elemental damage. This ability uses the Radiance keyword.",
+                    "keywords": ["radiance"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Shard Regeneration",
+                    "description": "Gradually regenerates health when near crystal structures. This ability uses the Shatter keyword.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "health_regen_rate": {
+                            "value": 5,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Reflective Crystal",
+                    "description": "Each time you block or absorb damage, there's a chance to reflect the damage back to the attacker. This ability uses the Pierce keyword.",
+                    "keywords": ["pierce"],
+                    "effect": {
+                        "damage_return_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Crystal Fortification",
+                    "description": "Temporarily increases allies' armor and damage resistance. This ability uses the Radiance keyword.",
+                    "keywords": ["radiance"],
+                    "effect": {
+                        "armor_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Refractive Aura",
+                    "description": "Creates an aura that deflects a percentage of incoming projectiles for allies within range. This ability uses the Shatter keyword.",
+                    "keywords": ["shatter"],
+                    "effect": {
+                        "projectile_deflection": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Crystalline Dominion",
+                "description": "Envelops the battlefield in a dome of radiant crystal energy, dealing continuous damage to enemies inside while simultaneously fortifying allies with crystal armor that reflects damage and increases resilience. The dome periodically erupts with crystal spikes, impaling and stunning enemies. This ability uses the Shatter and Radiance keywords.",
+                "keywords": ["shatter", "radiance"],
+                "synergy": "Enhances the effects of Shatter and Pierce, providing sustained damage and crowd control. The crystal armor boosts the effectiveness of Crystal Armor and Shard Shield, offering significant defensive and support benefits.",
+                "subtext": "Combination of supreme enemy clear, crowd control, and powerful defensive support for allies, making it ideal for both boss encounters and large groups of enemies."
+            },
+            {
+                "name": "Prismatic Overcharge",
+                "description": "Channels an immense amount of crystal energy into a prismatic beam that sweeps across the battlefield, dealing continuous damage to enemies and healing allies caught in the beam. The beam also increases allies' critical hit chances. This ability uses the Radiance keyword.",
+                "keywords": ["radiance"],
+                "synergy": "Works well with Radiance for sustained damage and Reflective Crystal for additional damage reflection. The critical hit chance increase synergizes with Crystal Fortification to maximize damage output.",
+                "subtext": "Combination of sustained enemy damage, healing support, and critical hit enhancement, making it effective for both boss damage and supporting allies."
+            }
+        ]
+    },
+    "shadow": {
+        "keywords": {
+            "corrupt": {
+                "name": "Corrupt",
+                "description": "Strikes enemies with dark energy, dealing damage over time and possibly inflicting debuffs such as reduced healing or increased damage taken."
+            },
+            "fear": {
+                "name": "Fear",
+                "description": "Hits enemies with a powerful shadow strike that causes fear, making them flee or reducing their combat effectiveness."
+            },
+            "darkness": {
+                "name": "Darkness",
+                "description": "Engulfs the area in darkness, dealing continuous damage to all enemies within the radius and possibly causing blindness or reduced visibility."
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Shadow Bolt",
+                    "description": "Fires a bolt of dark energy, dealing damage over time. This ability uses the Corrupt keyword.",
+                    "keywords": ["corrupt"]
+                },
+                {
+                    "name": "Shadow Slash",
+                    "description": "Strikes with a blade of shadow, causing bleeding and fear in enemies. This ability uses the Fear keyword.",
+                    "keywords": ["fear"]
+                },
+                {
+                    "name": "Shadow Bomb",
+                    "description": "Throws a bomb that engulfs enemies in darkness, causing continuous damage. This ability uses the Darkness keyword.",
+                    "keywords": ["darkness"]
+                },
+                {
+                    "name": "Shadow Wave",
+                    "description": "Sends a wave of shadow energy, damaging and pushing back enemies. This ability uses the Darkness keyword.",
+                    "keywords": ["darkness"]
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Shadow Veil",
+                    "description": "Reduces damage taken from attacks. This ability uses the Corrupt keyword.",
+                    "keywords": ["corrupt"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Cloak of Darkness",
+                    "description": "Grants temporary invisibility, avoiding all damage. This ability uses the Darkness keyword.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "invisibility_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Dark Barrier",
+                    "description": "Creates a barrier that absorbs damage and releases a shadow burst when broken. This ability uses the Fear keyword.",
+                    "keywords": ["fear"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Nightwalker",
+                    "description": "Grants a small chance to dodge attacks and increases movement speed in darkness. This ability uses the Darkness keyword.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "dodge_chance": {
+                            "value": 10,
+                            "type": "percent"
+                        },
+                        "movement_speed": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Umbral Resilience",
+                    "description": "Increases resistance to dark energy attacks. This ability uses the Corrupt keyword.",
+                    "keywords": ["corrupt"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Shadow Mimic",
+                    "description": "Each time you deal damage, there's a chance to summon a shadow clone that mimics your attacks. This ability uses the Fear keyword.",
+                    "keywords": ["fear"],
+                    "effect": {
+                        "clone_summon_chance": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Dark Empowerment",
+                    "description": "Temporarily increases allies' shadow damage and grants a chance to cause fear in enemies on hit. This ability uses the Fear keyword.",
+                    "keywords": ["fear"],
+                    "effect": {
+                        "damage_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "fear_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Veil of Shadows",
+                    "description": "Creates an area where allies become invisible and their movement speed is increased. This ability uses the Darkness keyword.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "invisibility_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "movement_speed": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Shadow Cataclysm",
+                "description": "Engulfs the battlefield in impenetrable darkness, causing all enemies within to take continuous damage and suffer from fear, reducing their combat effectiveness. Allies within the darkness gain increased damage and speed. This ability uses the Corrupt and Fear keywords.",
+                "keywords": ["corrupt", "fear"],
+                "synergy": "Combines with Shadow Strike to maximize damage over time and Dark Empowerment for boosting allies' damage. The fear effect synergizes with Shadow Mimic to cause additional disruptions.",
+                "subtext": "Combination of supreme enemy clear, crowd control, and powerful offensive boosts for allies, making it highly effective in chaotic combat scenarios."
+            },
+            {
+                "name": "Eclipse of Shadows",
+                "description": "Creates a massive eclipse that plunges the area into darkness, periodically sending out waves of shadow energy that deal damage and heal allies. The eclipse also makes allies invisible for its duration. This ability uses the Darkness keyword.",
+                "keywords": ["darkness"],
+                "synergy": "Works well with Darkness for maximum damage and Veil of Shadows to enhance invisibility and movement speed. The healing effect synergizes with Nightwalker to provide continuous support.",
+                "subtext": "Combination of sustained enemy damage, healing support, and invisibility, making it highly effective for both offensive and defensive strategies."
+            }
+        ]
+    }     
+}

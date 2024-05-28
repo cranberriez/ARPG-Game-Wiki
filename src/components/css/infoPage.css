@@ -1,0 +1,23 @@
+.tier {
+    font-weight: bold;
+}
+
+.tier.starter {
+    color: #a3c4dc;
+}
+
+.tier.basic {
+    color: #66cc66;
+}
+
+.tier.enhanced {
+    color: #66b2ff;
+}
+
+.tier.finalized {
+    color: #a366ff;
+}
+
+.tier.legendary {
+    color: #ff9900;
+}

@@ -1,0 +1,375 @@
+{
+    "shadow": {
+        "keywords": {
+            "corrupt": {
+                "name": "Corrupt",
+                "description": "Strikes enemies with dark energy, dealing damage over time and possibly inflicting debuffs such as reduced healing or increased damage taken.",
+                "stats": {
+                    "damage": {
+                        "value": 25,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 10,
+                        "type": "seconds"
+                    },
+                    "debuffs": {
+                        "reduced_healing": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "increased_damage_taken": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                }
+            },
+            "fear": {
+                "name": "Fear",
+                "description": "Hits enemies with a powerful shadow strike that causes fear, making them flee or reducing their combat effectiveness.",
+                "stats": {
+                    "fear_duration": {
+                        "value": 5,
+                        "type": "seconds"
+                    },
+                    "debuffs": {
+                        "combat_effectiveness_reduction": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            },
+            "darkness": {
+                "name": "Darkness",
+                "description": "Engulfs the area in darkness, dealing continuous damage to all enemies within the radius and possibly causing blindness or reduced visibility.",
+                "stats": {
+                    "damage": {
+                        "value": 30,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 8,
+                        "type": "seconds"
+                    },
+                    "debuffs": {
+                        "blindness_chance": {
+                            "value": 25,
+                            "type": "percent"
+                        }
+                    }
+                }
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Summons a shadow clone that mimics the user's attacks, dealing additional damage to enemies.",
+                "stats": {
+                    "damage": {
+                        "value": 50,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 10,
+                        "type": "seconds"
+                    },
+                    "clone_summon_chance": {
+                        "value": 15,
+                        "type": "percent"
+                    }
+                }
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Shadow Bolt",
+                    "description": "Fires a bolt of dark energy, dealing damage over time, causing Corrupt.",
+                    "keywords": ["corrupt"],
+                    "stats": {
+                        "damage": {
+                            "value": 50,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 6,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 4,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Shadow Slash",
+                    "description": "Strikes with a blade of shadow, causing bleeding and fear in enemies, causing Fear.",
+                    "keywords": ["fear"],
+                    "stats": {
+                        "damage": {
+                            "value": 60,
+                            "type": "damage"
+                        },
+                        "bleed_damage": {
+                            "value": 15,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 5,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 8,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "keywords": ["corrupt"]
+                    }
+                },
+                {
+                    "name": "Shadow Bomb",
+                    "description": "Throws a bomb that engulfs enemies in darkness, causing continuous damage and Darkness.",
+                    "keywords": ["darkness"],
+                    "stats": {
+                        "damage": {
+                            "value": 70,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 8,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 25,
+                            "type": "percent"
+                        },
+                        "keywords": ["fear"]
+                    }
+                },
+                {
+                    "name": "Shadow Wave",
+                    "description": "Sends a wave of shadow energy, damaging and pushing back enemies, causing Darkness.",
+                    "keywords": ["darkness"],
+                    "stats": {
+                        "damage": {
+                            "value": 80,
+                            "type": "damage"
+                        },
+                        "pushback_range": {
+                            "value": 4,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 12,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Shadow Veil",
+                    "description": "Reduces damage taken from attacks, causing Corrupt.",
+                    "keywords": ["corrupt"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Cloak of Darkness",
+                    "description": "Grants temporary invisibility, avoiding all damage, causing Darkness.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "invisibility_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "stats": {
+                        "cooldown": {
+                            "value": 40,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Dark Barrier",
+                    "description": "Creates a barrier that absorbs damage and releases a shadow burst when broken, causing Fear.",
+                    "keywords": ["fear"],
+                    "effect": {
+                        "shield_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    },
+                    "stats": {
+                        "shield_strength": {
+                            "value": 100,
+                            "type": "damage"
+                        },
+                        "cooldown": {
+                            "value": 25,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Nightwalker",
+                    "description": "Grants a small chance to dodge attacks and increases movement speed in darkness, causing Darkness.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "dodge_chance": {
+                            "value": 10,
+                            "type": "percent"
+                        },
+                        "movement_speed": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Umbral Resilience",
+                    "description": "Increases resistance to dark energy attacks, causing Corrupt.",
+                    "keywords": ["corrupt"],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Shadow Mimic",
+                    "description": "Each time you deal damage, there's a chance to summon a shadow clone that mimics your attacks, causing Clone.",
+                    "keywords": ["clone"],
+                    "secondary_effects": {
+                        "secondary_effect_chance": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "keywords": ["clone"]
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Dark Empowerment",
+                    "description": "Temporarily increases allies' shadow damage and grants a chance to cause fear in enemies on hit, causing Fear.",
+                    "keywords": ["fear"],
+                    "effect": {
+                        "damage_increase": {
+                            "value": 15,
+                            "type": "percent"
+                        },
+                        "fear_chance": {
+                            "value": 20,
+                            "type": "percent"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Veil of Shadows",
+                    "description": "Creates an area where allies become invisible and their movement speed is increased, causing Darkness.",
+                    "keywords": ["darkness"],
+                    "effect": {
+                        "invisibility_duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "movement_speed": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Shadow Cataclysm",
+                "description": "Engulfs the battlefield in impenetrable darkness, causing all enemies within to take continuous damage and suffer from fear, reducing their combat effectiveness. Allies within the darkness gain increased damage and speed. This ability uses the Corrupt and Fear keywords.",
+                "keywords": ["corrupt", "fear"],
+                "synergy": "Combines with Shadow Slash to maximize damage over time and Dark Empowerment for boosting allies' damage. The fear effect synergizes with Shadow Mimic to cause additional disruptions.",
+                "stats": {
+                    "damage": {
+                        "value": 100,
+                        "type": "damage"
+                    },
+                    "fear_duration": {
+                        "value": 6,
+                        "type": "seconds"
+                    },
+                    "duration": {
+                        "value": 20,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 60,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Combination of supreme enemy clear, crowd control, and powerful offensive boosts for allies, making it highly effective in chaotic combat scenarios."
+            },
+            {
+                "name": "Eclipse of Shadows",
+                "description": "Creates a massive eclipse that plunges the area into darkness, periodically sending out waves of shadow energy that deal damage and heal allies. The eclipse also makes allies invisible for its duration. This ability uses the Darkness keyword.",
+                "keywords": ["darkness"],
+                "synergy": "Works well with Darkness for maximum damage and Veil of Shadows to enhance invisibility and movement speed. The healing effect synergizes with Nightwalker to provide continuous support.",
+                "stats": {
+                    "damage": {
+                        "value": 120,
+                        "type": "damage"
+                    },
+                    "heal": {
+                        "value": 50,
+                        "type": "percent"
+                    },
+                    "invisibility_duration": {
+                        "value": 15,
+                        "type": "seconds"
+                    },
+                    "duration": {
+                        "value": 20,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 90,
+                        "type": "seconds"
+                    }
+                },
+                "subtext": "Combination of sustained enemy damage, healing support, and invisibility, making it highly effective for both offensive and defensive strategies."
+            }
+        ]
+    }
+}

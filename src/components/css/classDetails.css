@@ -1,0 +1,105 @@
+/* Class Detail Styles */
+.class-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1; /* Light border */
+    padding-bottom: 10px;
+}
+
+/* Keywords Section Styles */
+.keywords-section {
+    margin-bottom: 20px;
+}
+
+.keywords-list {
+    list-style: none;
+    padding: 0;
+}
+
+.keyword-item {
+    margin-bottom: 10px;
+}
+
+.keyword-name {
+    font-weight: bold;
+    color: #3498db; /* Light blue */
+}
+
+.keyword-description {
+    color: #bdc3c7; /* Light gray */
+}
+
+/* Abilities Section Styles */
+.abilities-section {
+    margin-bottom: 20px;
+}
+
+.abilities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ability-item {
+    margin-bottom: 10px;
+}
+
+.ability-name {
+    font-weight: bold;
+    color: #e74c3c; /* Light red */
+}
+
+.ability-description {
+    color: #bdc3c7; /* Light gray */
+}
+
+.ability-keywords {
+    font-style: italic;
+}
+
+/* Secondary Effects Styles */
+.secondary-effects {
+    margin-top: 10px;
+}
+
+/* Ultimates Section Styles */
+.ultimates-section {
+    margin-bottom: 20px;
+}
+
+.ultimates-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ultimate-item {
+    margin-bottom: 20px;
+}
+
+.ultimate-name {
+    font-weight: bold;
+    color: #9b59b6; /* Light purple */
+}
+
+.ultimate-description {
+    color: #bdc3c7; /* Light gray */
+}
+
+.ultimate-keywords {
+    font-style: italic;
+}
+
+.ultimate-synergy, .ultimate-subtext {
+    margin-top: 10px;
+    font-style: italic;
+    color: #bdc3c7; /* Light gray */
+}
+
+/* Keyword Wrapper Styles */
+.keyword-wrapper {
+    color: #e67e22; /* Light orange */
+    cursor: pointer;
+    text-decoration: underline;
+}
+.keyword-wrapper:hover {
+    text-decoration: none;
+}

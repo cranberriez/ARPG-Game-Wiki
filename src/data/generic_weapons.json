@@ -1,0 +1,551 @@
+{
+	"weapons": [
+		{
+			"type": "sword",
+			"description": "A balanced melee weapon suitable for quick and precise strikes.",
+			"handedness": "one-handed",
+			"stats": {
+				"damage": {
+                    "value": 50,
+                    "type": "damage"
+                },
+                    "attack_speed": {
+                    "value": 1.2,
+                    "type": "hits_per_second"
+                },
+                    "block_effectiveness": {
+                    "value": 60,
+                    "type": "percent"
+                },
+                    "critical_hit_damage": {
+                    "value": 150,
+                    "type": "percent"
+                },
+                    "critical_hit_chance": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                    "parry_effectiveness": {
+                    "value": 25,
+                    "type": "percent"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"berserker_rage",
+					"quick_reflexes",
+					"predators_instinct",
+					"void_leech",
+					"charged_fury",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"column2": [
+					"adrenaline_rush",
+					"healing_touch",
+					"unstoppable_force",
+					"void_rebound",
+					"electrified_guard",
+					"crystalize",
+					"shadows_embrace"
+				],
+				"intrinsic": [
+					"defensive_stance",
+					"blade_dance"
+				]
+			}
+		},
+		{
+			"type": "dagger",
+			"description": "A fast, close-range weapon ideal for rapid attacks.",
+			"handedness": "one-handed",
+			"stats": {
+				"damage": {
+                    "value": 30,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 2.5,
+                    "type": "hits_per_second"
+                },
+                "block_effectiveness": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 200,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 15,
+                    "type": "percent"
+                },
+                "parry_effectiveness": {
+                    "value": 25,
+                    "type": "percent"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"predators_instinct",
+					"quick_reflexes",
+					"healing_touch",
+					"void_infusion",
+					"charged_fury",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"column2": [
+					"adrenaline_rush",
+					"fleet_footed",
+					"chain_reaction",
+					"echo_strike",
+					"plasma_arc",
+					"shard_burst",
+					"nightmare_infusion"
+				],
+				"intrinsic": [
+					"assassins_mark",
+					"silent_strike"
+				]
+			}
+		},
+		{
+			"type": "pistol",
+			"description": "A compact firearm for quick and agile shooting.",
+			"handedness": "one-handed",
+			"stats": {
+				"damage": {
+                    "value": 40,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 1.8,
+                    "type": "hits_per_second"
+                },
+                "headshot_multiplier": {
+                    "value": 200,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 150,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "reload_speed": {
+                    "value": 2.5,
+                    "type": "seconds"
+                },
+                "range": {
+                    "value": 50,
+                    "type": "meters"
+                },
+                "piercing": {
+                    "value": 20,
+                    "type": "percent"
+                },
+                "magazine": {
+                    "value": 7,
+                    "type": "rounds"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"sharpshooter",
+					"reload_frenzy",
+					"quick_reflexes",
+					"void_leech",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"column2": [
+					"adrenaline_rush",
+					"focused_fury",
+					"chain_reaction",
+					"void_infusion",
+					"plasma_arc",
+					"piercing_shards",
+					"nightmare_infusion"
+				],
+				"intrinsic": [
+					"quick_draw",
+					"last_stand"
+				]
+			}
+		},
+		{
+			"type": "gauntlet",
+			"description": "A wearable weapon enhancing physical attacks and channeling elemental powers.",
+			"handedness": "one-handed",
+			"stats": {
+                "damage": {
+                    "value": 45,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 1.5,
+                    "type": "hits_per_second"
+                },
+                "block_effectiveness": {
+                    "value": 40,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 160,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 12,
+                    "type": "percent"
+                },
+                "parry_effectiveness": {
+                    "value": 25,
+                    "type": "percent"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"healing_touch",
+					"quick_reflexes",
+					"warriors_strength",
+					"void_leech",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"column2": [
+					"adrenaline_rush",
+					"unstoppable_force",
+					"defensive_stance",
+					"void_rebound",
+					"electrified_guard",
+					"crystal_harmony",
+					"umbral_shield"
+				],
+				"intrinsic": [
+					"power_punch",
+					"elemental_fist"
+				]
+			}
+		},
+        {
+			"type": "rifle",
+			"description": "A long-range firearm effective for precise and powerful shots.",
+			"handedness": "two-handed",
+			"stats": {
+                "damage": {
+                    "value": 60,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 1.0,
+                    "type": "hits_per_second"
+                },
+                "headshot_multiplier": {
+                    "value": 200,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 175,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 15,
+                    "type": "percent"
+                },
+                "reload_speed": {
+                    "value": 3.0,
+                    "type": "seconds"
+                },
+                "range": {
+                    "value": 80,
+                    "type": "meters"
+                },
+                "piercing": {
+                    "value": 15,
+                    "type": "percent"
+                },
+                "magazine": {
+                    "value": 16,
+                    "type": "rounds"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"sharpshooter",
+					"quick_reflexes",
+					"focused_fury",
+					"void_infusion",
+					"plasma_arc",
+					"piercing_shards",
+					"nightmare_infusion"
+				],
+				"column2": [
+					"reload_frenzy",
+					"killing_spree",
+					"chain_reaction",
+					"echo_strike",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"intrinsic": [
+					"precision_strike",
+					"suppressive_fire"
+				]
+			}
+		},
+		{
+			"type": "staff",
+			"description": "A magical weapon for casting spells and channeling elemental energy.",
+			"handedness": "two-handed",
+			"stats": {
+                "damage": {
+                    "value": 35,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 1.3,
+                    "type": "hits_per_second"
+                },
+                "headshot_multiplier": {
+                    "value": 150,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 140,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 12,
+                    "type": "percent"
+                },
+                "range": {
+                    "value": 60,
+                    "type": "meters"
+                },
+                "piercing": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "charge_time": {
+                    "value": 1.5,
+                    "type": "seconds"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"elemental_mastery",
+					"healing_touch",
+					"quick_reflexes",
+					"echo_strike",
+					"energy_overflow",
+					"crystal_harmony",
+					"nightmare_infusion"
+				],
+				"column2": [
+					"adrenaline_rush",
+					"mana_shield",
+					"chain_reaction",
+					"void_leech",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"intrinsic": [
+					"arcane_surge",
+					"mystic_barrier"
+				]
+			}
+		},
+		{
+			"type": "bow",
+			"description": "A ranged weapon that can shoot various types of arrows or energy bolts.",
+			"handedness": "two-handed",
+			"stats": {
+                "damage": {
+                    "value": 50,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 1.1,
+                    "type": "hits_per_second"
+                },
+                "headshot_multiplier": {
+                    "value": 220,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 160,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 14,
+                    "type": "percent"
+                },
+                "reload_speed": {
+                    "value": 2.0,
+                    "type": "seconds"
+                },
+                "range": {
+                    "value": 70,
+                    "type": "meters"
+                },
+                "piercing": {
+                    "value": 20,
+                    "type": "percent"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"sharpshooter",
+					"quick_reflexes",
+					"predators_instinct",
+					"echo_strike",
+					"plasma_arc",
+					"shard_burst",
+					"shadows_embrace"
+				],
+				"column2": [
+					"killing_spree",
+					"chain_reaction",
+					"focused_fury",
+					"void_leech",
+					"charged_fury",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"intrinsic": [
+					"piercing_arrows",
+					"explosive_arrows"
+				]
+			}
+		},
+		{
+			"type": "shotgun",
+			"description": "A close-range firearm that deals massive damage at short distances.",
+			"handedness": "two-handed",
+			"stats": {
+                "damage": {
+                    "value": 80,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 0.8,
+                    "type": "hits_per_second"
+                },
+                "headshot_multiplier": {
+                    "value": 150,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 200,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 10,
+                    "type": "percent"
+                },
+                "reload_speed": {
+                    "value": 3.5,
+                    "type": "seconds"
+                },
+                "range": {
+                    "value": 30,
+                    "type": "meters"
+                },
+                "piercing": {
+                    "value": 5,
+                    "type": "percent"
+                },
+                "magazine": {
+                    "value": 8,
+                    "type": "rounds"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"warriors_strength",
+					"quick_reflexes",
+					"adrenaline_rush",
+					"void_rebound",
+					"electrified_guard",
+					"piercing_shards",
+					"umbral_shield"
+				],
+				"column2": [
+					"unstoppable_force",
+					"killing_spree",
+					"focused_fury",
+					"void_leech",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"intrinsic": [
+					"scattershot",
+					"blast_radius"
+				]
+			}
+		},
+		{
+			"type": "hammer",
+			"description": "A heavy melee weapon that deals significant impact damage.",
+			"handedness": "two-handed",
+			"stats": {
+                "damage": {
+                    "value": 70,
+                    "type": "damage"
+                },
+                "attack_speed": {
+                    "value": 0.9,
+                    "type": "hits_per_second"
+                },
+                "block_effectiveness": {
+                    "value": 70,
+                    "type": "percent"
+                },
+                "critical_hit_damage": {
+                    "value": 150,
+                    "type": "percent"
+                },
+                "critical_hit_chance": {
+                    "value": 8,
+                    "type": "percent"
+                },
+                "parry_effectiveness": {
+                    "value": 25,
+                    "type": "percent"
+                }
+			},
+			"perk_pools": {
+				"column1": [
+					"warriors_strength",
+					"vitality_boost",
+					"berserker_rage",
+					"void_infusion",
+					"energy_overflow",
+					"crystalize",
+					"nightmare_infusion"
+				],
+				"column2": [
+					"defensive_stance",
+					"unstoppable_force",
+					"chain_reaction",
+					"void_leech",
+					"overload_burst",
+					"reflective_shards",
+					"fear_strike"
+				],
+				"intrinsic": [
+					"smash_impact",
+					"earthshaker"
+				]
+			}
+		}
+	]
+}

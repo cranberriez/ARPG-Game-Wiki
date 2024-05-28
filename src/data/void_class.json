@@ -1,0 +1,259 @@
+{
+    "void": {
+        "keywords": {
+            "void_echo": {
+                "name": "Void Echo",
+                "description": "Summons a void echo that mimics the user's attacks, dealing additional damage to enemies.",
+                "stats": {
+                    "damage": {
+                        "value": 25,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 10,
+                        "type": "seconds"
+                    },
+                    "secondary_effect_chance": {
+                        "value": 15,
+                        "type": "percent"
+                    }
+                },
+                "secondary_effects": {
+                    "keywords": ["annihilation"]
+                }
+            }
+        },
+        "abilities": {
+            "offensive": [
+                {
+                    "name": "Void Blast",
+                    "description": "Fires a concentrated beam of void energy, dealing significant damage to a single target, causing Drain.",
+                    "keywords": ["drain"],
+                    "stats": {
+                        "damage": {
+                            "value": 150,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 5,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Pulse",
+                    "description": "Releases a pulse of void energy, damaging and disorienting enemies in a cone, causing Oblivion.",
+                    "keywords": ["oblivion"],
+                    "stats": {
+                        "damage": {
+                            "value": 80,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 6,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 12,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Grenade",
+                    "description": "Throws a grenade that creates a void explosion, causing Oblivion in the center and to any killed opponents.",
+                    "keywords": ["oblivion"],
+                    "stats": {
+                        "damage": {
+                            "value": 100,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 8,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 15,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Lash",
+                    "description": "Extends a tendril of void energy to whip and damage enemies in a line, causing Annihilation on its final hit.",
+                    "keywords": ["annihilation"],
+                    "stats": {
+                        "damage": {
+                            "value": 120,
+                            "type": "damage"
+                        },
+                        "duration": {
+                            "value": 4,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 10,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Void Shield",
+                    "description": "Reduces damage taken from attacks.",
+                    "keywords": [],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 20,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 30,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Displacement",
+                    "description": "Temporarily phases the user out of reality, avoiding all damage.",
+                    "keywords": [],
+                    "stats": {
+                        "duration": {
+                            "value": 3,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Abyssal Guard",
+                    "description": "Summons void energy that reflects some incoming damage and reflects a portion back to the attacker, causing Drain.",
+                    "keywords": ["drain"],
+                    "effect": {
+                        "damage_return": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    },
+                    "stats": {
+                        "duration": {
+                            "value": 12,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 25,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Ethereal Step",
+                    "description": "Grants a small chance to dodge attacks by phasing momentarily.",
+                    "keywords": [],
+                    "effect": {
+                        "dodge_chance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Void Resilience",
+                    "description": "Increases resistance to all elemental damage.",
+                    "keywords": [],
+                    "effect": {
+                        "damage_resistance": {
+                            "value": 10,
+                            "type": "percent"
+                        }
+                    }
+                },
+                {
+                    "name": "Echo of the Void",
+                    "description": "Each time you deal damage, there's a chance to summon a void echo that attacks enemies, causing Annihilation.",
+                    "keywords": ["annihilation", "void_echo"],
+                    "stats": {
+                        "echo_summon_chance": {
+                            "value": 15,
+                            "type": "percent"
+                        }
+                    }
+                }
+            ],
+            "support": [
+                {
+                    "name": "Voidwalk",
+                    "description": "Allows the user to teleport short distances, evading attacks.",
+                    "keywords": [],
+                    "stats": {
+                        "range": {
+                            "value": 15,
+                            "type": "range"
+                        },
+                        "cooldown": {
+                            "value": 8,
+                            "type": "seconds"
+                        }
+                    }
+                },
+                {
+                    "name": "Temporal Distortion",
+                    "description": "Slows down enemies in a radius, reducing their attack and movement speed.",
+                    "keywords": [],
+                    "stats": {
+                        "radius": {
+                            "value": 10,
+                            "type": "range"
+                        },
+                        "duration": {
+                            "value": 10,
+                            "type": "seconds"
+                        },
+                        "cooldown": {
+                            "value": 20,
+                            "type": "seconds"
+                        }
+                    }
+                }
+            ]
+        },
+        "ultimates": [
+            {
+                "name": "Void Maelstrom",
+                "description": "Summons a swirling maelstrom of void energy that hovers over the battlefield, dealing continuous damage to enemies caught within its vortex. The maelstrom also periodically sends out waves of void energy that disrupt enemy abilities and reduce their defenses, causing Drain and Oblivion.",
+                "keywords": ["drain", "oblivion"],
+                "synergy": "Combines with Drain to amplify heal effects and increase damage over time. The defense reduction enhances the effectiveness of all void-based attacks, making Void Shield and Abyssal Guard more potent.",
+                "stats": {
+                    "damage": {
+                        "value": 200,
+                        "type": "damage"
+                    },
+                    "duration": {
+                        "value": 15,
+                        "type": "seconds"
+                    },
+                    "cooldown": {
+                        "value": 60,
+                        "type": "seconds"
+                    }
+                }
+            }
+        ]
+    }
+}

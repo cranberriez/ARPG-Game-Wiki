@@ -1,0 +1,29 @@
+.weapon-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1; /* Light border */
+    padding-bottom: 10px;
+}
+
+/* Perk Pool Styles */
+.weapon-perk-pool {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.weapon-detail .perk-description {
+    padding: 20px;
+    border: 1px solid gray;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.weapon-perk-list .weapon-perk {
+    cursor: pointer;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
