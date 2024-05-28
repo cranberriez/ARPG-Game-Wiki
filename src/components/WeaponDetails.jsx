@@ -95,7 +95,7 @@ const SpecialDetails = ({specialData}) => (
 )
 
 // Component to display weapon stats
-const WeaponStats = ({ stats, specialData }) => (
+const WeaponStats = ({ stats }) => (
     <div className="weapon-stats">
         <h2>Weapon Stats</h2>
         <ul>
