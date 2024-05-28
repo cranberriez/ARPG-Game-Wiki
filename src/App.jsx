@@ -1,5 +1,5 @@
 import { Outlet, Link } from 'react-router-dom';
-import { generatePath } from './utils';
+import { generatePath } from '@/helpers/generatePath';
 import './App.css'
 
 function App() {

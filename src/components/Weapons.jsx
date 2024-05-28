@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Outlet, Link, useParams } from 'react-router-dom';
 import weaponData from '@/data/generic_weapons.json';
 import legendaryData from '@/data/legendary_weapons.json'
-import { generatePath } from './utils';
+import { generatePath } from '@/helpers/generatePath';
 
 import "./css/weapons.css";
 
