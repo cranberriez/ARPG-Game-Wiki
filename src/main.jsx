@@ -17,7 +17,7 @@ import Perks from './components/Perks.jsx';
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/ARPG-Game-Wiki',
         element: <App />,
         children: [
             {
