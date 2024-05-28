@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Outlet, Link, useParams } from 'react-router-dom';
 import weaponData from '@/data/generic_weapons.json';
 import legendaryData from '@/data/legendary_weapons.json'
+import { generatePath } from './utils';
 
 import "./css/weapons.css";
 
@@ -44,7 +45,7 @@ const Weapons = () => {
                 <ul>
                     {oneHandedWeapons.map((weapon, index) => (
                         <li key={index}>
-                            <Link to={`/weapons/${weapon.type.toLowerCase()}`}>{weapon.type.charAt(0).toUpperCase() + weapon.type.slice(1)}</Link> {weapon.short_description}
+                            <Link to={generatePath(`/weapons/${weapon.type.toLowerCase()}`)}>{weapon.type.charAt(0).toUpperCase() + weapon.type.slice(1)}</Link> {weapon.short_description}
                         </li>
                     ))}
                 </ul>
@@ -53,7 +54,7 @@ const Weapons = () => {
                 <ul>
                     {twoHandedWeapons.map((weapon, index) => (
                         <li key={index}>
-                            <Link to={`/weapons/${weapon.type.toLowerCase()}`}>{weapon.type.charAt(0).toUpperCase() + weapon.type.slice(1)}</Link> {weapon.short_description}
+                            <Link to={generatePath(`/weapons/${weapon.type.toLowerCase()}`)}>{weapon.type.charAt(0).toUpperCase() + weapon.type.slice(1)}</Link> {weapon.short_description}
                         </li>
                     ))}
                 </ul>
@@ -66,7 +67,7 @@ const Weapons = () => {
                     <ul className={openLegendary === key ? "" : "hidden"}>
                         {legendaries[key].map((weapon_name) => (
                             <li key={weapon_name}>
-                                <Link to={`/weapons/${weapon_name}`}>{legendaryData.weapons[weapon_name].name}</Link>
+                                <Link to={generatePath(`/weapons/${weapon_name}`)}>{legendaryData.weapons[weapon_name].name}</Link>
                             </li>
                         ))}
                     </ul>
@@ -97,7 +98,7 @@ const Weapons = () => {
                 {weaponName && (
                     <ul>
                         <li>
-                            <Link to="/weapons">Back to Weapons</Link>
+                            <Link to={generatePath("/weapons")}>Back to Weapons</Link>
                         </li>
                     </ul>
                 )}

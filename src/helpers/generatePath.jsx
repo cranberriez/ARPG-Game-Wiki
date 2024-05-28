@@ -1,0 +1,1 @@
+export const generatePath = (path) => `/ARPG-Game-Wiki${path}`;

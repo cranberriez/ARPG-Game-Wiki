@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom';
+import { generatePath } from './utils';
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <nav>
-            <Link to="/">Home</Link> | <Link to="/classes">Classes</Link> | <Link to="/weapons">Weapons</Link> | <Link to="/perks">Weapon Perks</Link>
+            <Link to={generatePath("/")}>Home</Link> | <Link to={generatePath("/classes")}>Classes</Link> | <Link to={generatePath("/weapons")}>Weapons</Link> | <Link to={generatePath("/perks")}>Weapon Perks</Link>
         </nav>
         <Outlet />
     </>
