@@ -12,7 +12,7 @@ const Classes = () => {
                 <ul>
                     {Object.entries(classData).map(([key, cls]) => (
                         <li key={key}>
-                            <Link to={`/classes/${key.toLowerCase()}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</Link> - {className ? cls.short_description : cls.description}
+                            <Link to={generatePath(`/classes/${key.toLowerCase()}`)}>{key.charAt(0).toUpperCase() + key.slice(1)}</Link> - {className ? cls.short_description : cls.description}
                         </li>
                     ))}
 
