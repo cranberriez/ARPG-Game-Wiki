@@ -1,4 +1,37 @@
 {
+    "generic": {
+        "description": "A list of generic effects and abilities that all classes have access to.",
+        "short_description": "Generic effects and abilities available to all classes",
+        "keywords":{
+            "dodge": {
+                "name": "Dodge",
+                "description": "Temporary invulnerability."
+            }
+        },
+        "abilities":{
+            "offensive": [
+                {
+                    "name":"Melee",
+                    "description":"All characters can punch or melee.",
+                    "keywords":[]
+                }
+            ],
+            "defensive": [
+                {
+                    "name": "Dodge",
+                    "description": "Pressing the directional plus Dodge key will Dodge in that direction. The direction doesn't matter for invulnerability but is used for movement.",
+                    "keywords":[]
+                }
+            ],
+            "passive": [
+                {
+                    "name": "Regeneration",
+                    "description": "Being out of combat for a couple seconds will cause you to start regenerating health.",
+                    "keywords":[]
+                }
+            ]
+        }
+    },
     "void":{
         "description": "Masters of dark energy, Void class users manipulate the essence of the void to drain life, create void fields, and unleash devastating annihilations. They can summon echoes of void energy to mimic their attacks and disrupt enemies with powerful void techniques.",
         "short_description": "Masters of dark energy.",
@@ -54,7 +87,7 @@
             "defensive":[
                 {
                     "name":"Void Shield",
-                    "description":"Reduces damage taken from attacks.",
+                    "description":"Reduces damage taken from attacks, absorbing it as ability energy.",
                     "keywords":[]
                 },
                 {
@@ -184,7 +217,7 @@
             "defensive":[
                 {
                     "name":"Plasma Shield",
-                    "description":"Reduces damage taken from attacks.",
+                    "description":"Reduces damage taken from attacks, converting it into movement and attack speed.",
                     "keywords":[]
                 },
                 {
@@ -251,7 +284,7 @@
             },
             {
                 "name":"Supernova Cascade",
-                "description":"Triggers a series of powerful supernovas that cascade across the battlefield, dealing immense damage to all enemies caught in the blasts. Each explosion charges allies' abilities, reducing cooldowns significantly.",
+                "description":"Triggers a series of powerful Supernovas that cascade across the battlefield, dealing immense damage to all enemies caught in the blasts. Each explosion charges allies' abilities, reducing cooldowns significantly.",
                 "keywords":[
                     "supernova"
                 ],
@@ -312,21 +345,21 @@
             "defensive":[
                 {
                     "name":"Crystal Armor",
-                    "description":"Reduces damage taken and reflects a portion of melee damage, causing Shatter.",
+                    "description":"Reduces damage taken and empowering your weapon causing it to embed shards on attacks.",
                     "keywords":[
                         "shatter"
                     ]
                 },
                 {
                     "name":"Shard Shield",
-                    "description":"Creates a shield of crystal shards that absorbs damage, causing Pierce.",
+                    "description":"Creates a shield of crystal shards that absorbs damage charging a Radiance beam if enough damage is absorbed.",
                     "keywords":[
                         "pierce"
                     ]
                 },
                 {
                     "name":"Crystalline Guard",
-                    "description":"Summons crystal barriers that block incoming attacks, causing Radiance.",
+                    "description":"Summons crystal barriers in front of you that block incoming attacks emitting Piercing shards when destroyed.",
                     "keywords":[
                         "radiance"
                     ]
@@ -335,21 +368,19 @@
             "passive":[
                 {
                     "name":"Prismatic Defense",
-                    "description":"Increases resistance to elemental damage, causing Radiance.",
+                    "description":"Increases resistance to elemental damage.",
                     "keywords":[
                         "radiance"
                     ]
                 },
                 {
                     "name":"Shard Regeneration",
-                    "description":"Gradually regenerates health when near crystal structures, causing Shatter.",
-                    "keywords":[
-                        "shatter"
-                    ]
+                    "description":"Gradually regenerates health when near crystal structures or defeating enemies with embedded shards.",
+                    "keywords":[]
                 },
                 {
                     "name":"Reflective Crystal",
-                    "description":"Each time you block or absorb damage, there's a chance to reflect the damage back to the attacker, causing Pierce.",
+                    "description":"When killing enemies with embedded shards they emit Piercing shards to other targets.",
                     "keywords":[
                         "pierce"
                     ]
@@ -358,17 +389,13 @@
             "support":[
                 {
                     "name":"Crystal Fortification",
-                    "description":"Temporarily increases allies' armor and damage resistance, causing Radiance.",
-                    "keywords":[
-                        "radiance"
-                    ]
+                    "description":"Temporarily increases allies' armor and damage resistance.",
+                    "keywords":[]
                 },
                 {
                     "name":"Refractive Aura",
-                    "description":"Creates an aura that deflects a percentage of incoming projectiles for allies within range, causing Shatter.",
-                    "keywords":[
-                        "shatter"
-                    ]
+                    "description":"Creates an aura around yourself and nearby allies that deflects a percentage of incoming projectiles.",
+                    "keywords":[]
                 }
             ]
         },
@@ -411,7 +438,7 @@
                 "description":"Engulfs the area in darkness, dealing continuous damage to all enemies within the radius and possibly causing blindness or reduced visibility."
             },
             "clone":{
-                "name":"Clone",
+                "name":"Shadow Clone",
                 "description":"Summons a shadow clone that mimics the user's attacks, dealing additional damage to enemies."
             }
         },
@@ -433,14 +460,14 @@
                 },
                 {
                     "name":"Shadow Bomb",
-                    "description":"Throws a bomb that engulfs enemies in darkness, causing continuous damage and Darkness.",
+                    "description":"Throws a bomb that engulfs the area and enemies in Darkness, causing continuous damage.",
                     "keywords":[
                         "darkness"
                     ]
                 },
                 {
                     "name":"Shadow Wave",
-                    "description":"Sends a wave of shadow energy, damaging and pushing back enemies, causing Darkness.",
+                    "description":"Sends a wave of shadow energy, damaging and pushing back enemies, causing an area of Darkness.",
                     "keywords":[
                         "darkness"
                     ]
@@ -449,21 +476,19 @@
             "defensive":[
                 {
                     "name":"Shadow Veil",
-                    "description":"Reduces damage taken from attacks, causing Corrupt.",
+                    "description":"Slightly reduces damage taken from attacks and corrupts nearby enemies.",
                     "keywords":[
                         "corrupt"
                     ]
                 },
                 {
                     "name":"Cloak of Darkness",
-                    "description":"Grants temporary invisibility, avoiding all damage, causing Darkness.",
-                    "keywords":[
-                        "darkness"
-                    ]
+                    "description":"Grants temporary invisibility, avoiding all damage.",
+                    "keywords":[]
                 },
                 {
-                    "name":"Dark Barrier",
-                    "description":"Creates a barrier that absorbs damage and releases a shadow burst when broken, causing Fear.",
+                    "name":"Dark Offering",
+                    "description":"Creates an offering/statue that absorbs damage and releases a damaging shadow burst when broken that causes Fear on enemies.",
                     "keywords":[
                         "fear"
                     ]
@@ -472,21 +497,20 @@
             "passive":[
                 {
                     "name":"Nightwalker",
-                    "description":"Grants a small chance to dodge attacks and increases movement speed in darkness, causing Darkness.",
+                    "description":"Grants a small chance to dodge attacks and increases movement speed.",
+                    "keywords":[]
+                },
+                {
+                    "name":"Umbral Resilience",
+                    "description":"Increases resistance to attacks from enemies that are Corrupeted or in an area of Darkness.",
                     "keywords":[
+                        "corrupt",
                         "darkness"
                     ]
                 },
                 {
-                    "name":"Umbral Resilience",
-                    "description":"Increases resistance to dark energy attacks, causing Corrupt.",
-                    "keywords":[
-                        "corrupt"
-                    ]
-                },
-                {
                     "name":"Shadow Mimic",
-                    "description":"Each time you deal damage, there's a chance to summon a shadow clone that mimics your attacks, causing Clone.",
+                    "description":"Each time you deal damage, there's a chance to summon a shadow clone that mimics your attacks, creating a Clone.",
                     "keywords":[
                         "clone"
                     ]
@@ -495,17 +519,15 @@
             "support":[
                 {
                     "name":"Dark Empowerment",
-                    "description":"Temporarily increases allies' shadow damage and grants a chance to cause fear in enemies on hit, causing Fear.",
+                    "description":"Temporarily increases allies' damage and grants a chance to cause Fear on hit.",
                     "keywords":[
                         "fear"
                     ]
                 },
                 {
                     "name":"Veil of Shadows",
-                    "description":"Creates an area where allies become invisible and their movement speed is increased, causing Darkness.",
-                    "keywords":[
-                        "darkness"
-                    ]
+                    "description":"Creates an area where allies become invisible and their movement speed is increased.",
+                    "keywords":[]
                 }
             ]
         },

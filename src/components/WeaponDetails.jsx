@@ -159,7 +159,7 @@ const SelectablePerk = ({ perkName, onSelectPerk }) => {
 const perkClasses = {
     "void": ["void_leech", "abyssal_momentum", "void_infusion", "echo_strike", "void_rebound"],
     "plasma": ["overload_burst", "electrified_guard", "charged_fury", "energy_overflow", "plasma_arc"],
-    "crystal": ["reflective_shards", "crystallize", "shard_burst", "piercing_shards", "crystal_harmony"],
+    "crystal": ["reflective_shards", "crystalize", "shard_burst", "piercing_shards", "crystal_harmony"],
     "shadow": ["fear_strike", "umbral_shield", "shadow_step", "nightmare_infusion", "shadows_embrace"]
 }
 

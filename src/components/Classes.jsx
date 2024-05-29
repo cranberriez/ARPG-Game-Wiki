@@ -2,6 +2,8 @@ import React from 'react';
 import { Outlet, Link, useParams } from 'react-router-dom';
 import classData from '@/data/classes.json';
 
+import { generatePath } from '@/helpers/generatePath';
+
 const Classes = () => {
     const { className } = useParams();
 
@@ -21,7 +23,7 @@ const Classes = () => {
             </div>
             <div className='main-column'>
                 { className && <li>
-                    <Link to="/classes">Back to Classes</Link>
+                    <Link to={generatePath("/classes")}>Back to Classes</Link>
                 </li>}
                 <Outlet />
             </div>

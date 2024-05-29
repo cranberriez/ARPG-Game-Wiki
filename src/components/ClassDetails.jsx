@@ -24,6 +24,9 @@ const ClassDetail = () => {
     const { className } = useParams();
     const classInfo = classData[className];
 
+    const hasAbilities = (Boolean) (classInfo?.abilities ?? null);
+    const hasUltimates = (Boolean) (classInfo?.ultimates ?? null);
+
     if (!classInfo) {
         return <div className="class-not-found">Class not found</div>;
     }
@@ -32,8 +35,8 @@ const ClassDetail = () => {
         <div className="class-detail">
             <h2 className="class-name">{capitalizeFirstLetter(className)} Class</h2>
             <Keywords keywords={classInfo.keywords} />
-            <AbilitiesList abilities={classInfo.abilities} keywords={classInfo.keywords} />
-            <UltimatesList ultimates={classInfo.ultimates} keywords={classInfo.keywords} />
+            { hasAbilities && <AbilitiesList abilities={classInfo.abilities} keywords={classInfo.keywords} />}
+            { hasUltimates && <UltimatesList ultimates={classInfo.ultimates} keywords={classInfo.keywords} />}
         </div>
     );
 };
@@ -61,7 +64,7 @@ const Keyword = ({ keyword }) => (
 // Component to display a list of abilities grouped by type
 const AbilitiesList = ({ abilities, keywords }) => (
     <>
-        {['offensive', 'defensive', 'passive', 'support'].map((category) => (
+        {Object.keys(abilities).map((category) => (
             <div key={category} className={`abilities-section ${category}-abilities`}>
                 <h3 className="section-title">{capitalizeFirstLetter(category)} Abilities</h3>
                 <ul className="abilities-list">
